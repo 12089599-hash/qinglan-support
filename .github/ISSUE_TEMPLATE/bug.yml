@@ -1,0 +1,78 @@
+name: 问题反馈
+description: 反馈青岚洞府的安装、存档、玩法、账号或显示问题
+title: "[问题] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿在公开工单中填写密码、验证码、完整存档或其他敏感信息。
+  - type: dropdown
+    id: source
+    attributes:
+      label: 安装来源
+      options:
+        - App Store
+        - TestFlight
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统
+      description: 例如 iPhone 15，iOS 18.5
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: App 版本与构建号
+      description: 可在 TestFlight 或 App 信息中查看
+    validations:
+      required: true
+  - type: dropdown
+    id: cloud
+    attributes:
+      label: 是否登录云端账号
+      options:
+        - 否
+        - 是
+        - 不确定
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 请说明期望结果和实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开……
+        2. 点击……
+        3. 出现……
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 发生时间
+      description: 涉及存档或在线功能时请尽量填写
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 可拖入不包含敏感信息的截图或录屏
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我没有在此工单中填写密码、验证码或其他敏感信息
+          required: true

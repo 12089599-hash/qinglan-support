@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://12089599-hash.github.io/qinglan-support/sitemap.xml
